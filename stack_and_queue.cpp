@@ -31,7 +31,7 @@ void queueBasics()
 {
     queue<int> q; //declare a queue of integers
 
-    //since Q is LIFO, push() adds element to the end
+    //since Q is FIFO, push() adds element to the end
     q.push(1); // {1}
     q.push(2); // {1,2}
     q.push(5); // {1,2,5}
