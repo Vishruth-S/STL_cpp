@@ -167,6 +167,28 @@ void vectorModifierFunctions()
 
     v.clear(); //erases the entire vector
 }
+
+void extraVectorFunctions()
+{
+    vector<int> v;
+    v.push_back(4);
+    v.push_back(8);
+    v.push_back(1);
+    v.push_back(5);
+    v.push_back(2);
+
+    //Find minimum element
+    cout << *min_element(v.begin(), v.end());
+
+    //Find maximum element
+    cout << *max_element(v.begin(), v.end());
+
+    //Find sum of elements
+    int sum;
+    //SYNTAX: accumulate(first_index, last_index, initial value of sum);
+    sum = accumulate(v.begin(), v.end(), 0)
+}
+
 int main()
 {
     //BasicsOfVectors();
@@ -175,4 +197,5 @@ int main()
     //inputElements();
     //commonVectorFunctions();
     //vectorModifierFunctions();
+    // extraVectorFunctions();
 }
