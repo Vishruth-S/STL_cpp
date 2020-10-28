@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#include <numeric>
 
 using namespace std;
 
@@ -45,28 +47,27 @@ void printElements()
     // v = {10,20,30,40,50}
 
     //Ways to Print all elements
-    //1) Using iterator (v1.end() returns an iterator pointing to the theoretical element that follows the last element in the vector)
+    //1) Print elements using index
+    for (int i = 0; i < v.size(); i++)
+    {
+        cout << v[i];
+    }
+    //2) Using iterator (v1.end() returns an iterator pointing to the theoretical element that follows the last element in the vector)
     for (vector<int>::iterator it = v.begin(); it != v.end(); it++)
     {
         cout << *(it) << " ";
     }
 
-    //2) Iterator can also be declared using the auto keyword
+    //3) Iterator can also be declared using the auto keyword
     for (auto it = v.begin(); it != v.end(); it++)
     {
         cout << *(it) << " ";
     }
 
-    //3) Print using forEach loop
+    //4) Print using forEach loop
     for (auto it3 : v)
     {
         cout << it3 << " ";
-    }
-
-    //4) Print elements using index
-    for (int i = 0; i < v.size(); i++)
-    {
-        cout << v[i];
     }
 }
 
@@ -77,7 +78,7 @@ void inputElements()
     //To input elements, we can use simple loops
     //If size is known:
     int n = 5, input = 0; //assume n is size
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < n; i++)
     {
         cin >> input;
         vec.push_back(input);
@@ -118,9 +119,6 @@ void commonVectorFunctions()
 
     //size() Returns the number of elements in the vector.
     cout << "Size : " << v.size(); //prints 5
-
-    //capacity() Returns the maximum number of elements that the vector can hold.
-    cout << "\nCapacity : " << v.capacity(); //prints value depending on system
 
     // empty() Returns (true/false) whether the vector is empty.
     if (v.empty())
@@ -170,12 +168,7 @@ void vectorModifierFunctions()
 
 void extraVectorFunctions()
 {
-    vector<int> v;
-    v.push_back(4);
-    v.push_back(8);
-    v.push_back(1);
-    v.push_back(5);
-    v.push_back(2);
+    vector<int> v = {4, 5, 8, 2, 1, 5, 5};
 
     //Find minimum element
     cout << *min_element(v.begin(), v.end());
@@ -186,7 +179,24 @@ void extraVectorFunctions()
     //Find sum of elements
     int sum;
     //SYNTAX: accumulate(first_index, last_index, initial value of sum);
-    sum = accumulate(v.begin(), v.end(), 0)
+    sum = accumulate(v.begin(), v.end(), 0);
+
+    // To sort elements in ascending order. Time complexity: O(NlogN)
+    sort(v.begin(), v.end()); // {1,2,4,5,5,5,8}
+
+    // The following functions are for SORTED vectors
+    // Binary search to check if element in vector. Time complexity: O(logn)
+    bool isPresent = binary_search(v.begin(), v.end(), 4);
+    cout << isPresent; // prints true
+
+    // To find the fisrt occurence of an element
+    // SYNTAX: lower_bound(vec.begin(),vec.end(),element), returns an iterator
+    vector<int>::iterator it = lower_bound(v.begin(), v.end(), 5);
+    // To find the last occurenece of an element
+    // SYNTAX: upper_bound(vec.begin(), vec.end(),element), returns an iterator
+    vector<int>::iterator it2 = upper_bound(v.begin(), v.end(), 5);
+    // To find the number of occurences of an element
+    cout << it2 - it; //prints 3, since no. of occurence = upper_bound - lower_bound
 }
 
 int main()
