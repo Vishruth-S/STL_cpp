@@ -189,10 +189,11 @@ void extraVectorFunctions()
     bool isPresent = binary_search(v.begin(), v.end(), 4);
     cout << isPresent; // prints true
 
-    // To find the fisrt occurence of an element
+    // To find the fisrt occurence of an element (gives an element >= given element)
+    // If not present, then returns immediate next element. Returns v.end() if element passed is maximum and not present
     // SYNTAX: lower_bound(vec.begin(),vec.end(),element), returns an iterator
     vector<int>::iterator it = lower_bound(v.begin(), v.end(), 5);
-    // To find the last occurenece of an element
+    // To find the first element strictly greater (>) than given element
     // SYNTAX: upper_bound(vec.begin(), vec.end(),element), returns an iterator
     vector<int>::iterator it2 = upper_bound(v.begin(), v.end(), 5);
     // To find the number of occurences of an element
@@ -201,11 +202,11 @@ void extraVectorFunctions()
 
 int main()
 {
-    //BasicsOfVectors();
-    //printElements();
-    //accessingElements();
-    //inputElements();
-    //commonVectorFunctions();
-    //vectorModifierFunctions();
+    // BasicsOfVectors();
+    // printElements();
+    // accessingElements();
+    // inputElements();
+    // commonVectorFunctions();
+    // vectorModifierFunctions();
     // extraVectorFunctions();
 }
