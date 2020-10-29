@@ -6,7 +6,7 @@ Vectors are sequence containers representing arrays that can change in size.
 ## Contents
 * Basics
 
-## Basics
+## 1) Basics
 ### Declaring a vector
 ```cpp
 vector<int> v1;  
@@ -90,6 +90,29 @@ Elements in a vector can be accessed in many ways
  for (auto it : v)
  {
     cout << it << " ";
+ }
+ ```
+ 
+ ### Input elements
+ Simple loops can be used for this 
+ 1. If size is known
+ ```cpp    
+ vector<int> vec;
+ int n = 5; //assume n is size
+ int input;
+ for (int i = 0; i < n; i++)  //simple for loop 
+ {
+     cin >> input;
+     vec.push_back(input);
+ }
+ ```
+ 2. If size is not known
+ ```cpp
+ vector<int> vec;
+ int input;
+ while (cin >> input) //enter any non-integer to end the loop!
+ {
+     vec.push_back(input);
  }
  ```
  
