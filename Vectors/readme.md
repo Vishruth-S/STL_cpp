@@ -31,6 +31,7 @@ vector<int> v4(v3); //{25,25,25}
 `push_back()` is used to add elements to the end of a vector.   
 **Syntax: `vector.push_back(element)`**
 ```cpp
+vector<int> v1;  
 v1.push_back(10); //{10}
 v1.push_back(30); //{10,30}
 v1.push_back(15); //{10,30,15}
