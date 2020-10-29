@@ -9,7 +9,7 @@ Vectors are sequence containers representing arrays that can change in size.
 ## Basics
 ### Declaring a vector
 ```cpp
-vector<int> v1;  //{}
+vector<int> v1;  
 ```
 ### Adding elements
 `push_back()` is used to add elements to the end of a vector.   
@@ -34,3 +34,26 @@ To Create a vector from another existing vector
 ```cpp
 vector<int> v4(v3); // {25,25,25}
 ```
+
+### Accessing elements
+Elements in a vector can be accessed in many ways
+1) Using index
+ ```cpp
+ vector<int> v = {12,40,25,61,30};
+ cout << v[3]; //prints 25
+ cout << v[0]; //prints 12
+ ```
+ 2) Using iterators
+ ```cpp
+ vector<int> v = {12,40,25,61,30};
+ // Declaring iterator to a vector 
+ vector<int>::iterator it;
+ it = v.begin(); //begin() returns an iterator pointing to the first element
+ cout << *(it); //prints 12
+ it++;
+ cout << *(it); //prints 40
+ it = it + 2;
+ cout << *(it); //prints 61
+ ```
+ 
+ 
