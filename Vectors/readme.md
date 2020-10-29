@@ -1,6 +1,7 @@
 # Vectors
 
 Vectors are sequence containers representing arrays that can change in size.
+![Vector](https://external-preview.redd.it/t4WYdRStiv3sCmYpELIcNXq9hpL9ppvqBpcjr1TzA5g.jpg?auto=webp&s=0c7dbae06c6667a2a431c2ef9471b69aeea05907)
 
 ## Contents
 * Basics
