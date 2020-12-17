@@ -5,6 +5,10 @@ Vectors are sequence containers representing arrays that can change in size.
 
 ## Contents
 * Basics
+* Adding elements
+* Accessing elements
+* Printing all elements
+* Input a vector
 
 ## 1) Basics
 ### Declaring a vector
