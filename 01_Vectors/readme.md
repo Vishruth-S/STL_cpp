@@ -11,9 +11,13 @@ Vectors are sequence containers representing arrays that can change in size.
 * Input a vector
 
 ## 1) Basics
-### Declaring a vector
+### Declaring a vector - Syntax
 ```cpp
-vector<int> v1;  
+vector <datatype> name;
+```
+For example, to declare a vector of integers, we can use
+```cpp
+vector <int> v1;  
 ```
 
 ### Initializing a vector
