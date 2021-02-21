@@ -75,7 +75,7 @@ else
 ```
 
 ### Add an element into the queue
-`push(x)` is used to insert an element x to the front of the queue
+`push(x)` is used to insert an element x to the rear of the queue
 ```cpp
 q.push(10); // inserts 10 into the queue
 q.push(20); // inserts 20 into the queue
