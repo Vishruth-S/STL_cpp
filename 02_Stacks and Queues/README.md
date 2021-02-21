@@ -82,14 +82,21 @@ q.push(20); // inserts 20 into the queue
 ```
 
 ### Get the front element from the queue
-`front()` is used to get the topmost element from the queue
+`front()` is used to get the front element from the queue
 ```cpp
 int el = q.front();
 cout << el;  // prints 10;
 ```
 
+### Get the rear element from the queue
+`back()` is used to get rear element from the queue
+```cpp
+int el = q.back();
+cout << el;  // prints 20; 
+```
+
 ### Remove an element from the queue
-`pop()` removes an element in the top of queue
+`pop()` removes an element in the front of queue
 ```cpp
 q.pop();  // Removes 20 from the queue
 ```
