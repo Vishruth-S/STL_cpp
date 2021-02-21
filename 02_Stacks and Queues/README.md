@@ -98,7 +98,7 @@ cout << el;  // prints 20;
 ### Remove an element from the queue
 `pop()` removes an element in the front of queue
 ```cpp
-q.pop();  // Removes 20 from the queue
+q.pop();  // Removes 10 from the queue
 ```
 
 ### Get the number of elements in the queue
