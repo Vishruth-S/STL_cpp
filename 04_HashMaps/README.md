@@ -30,14 +30,6 @@ if(mp.find(key) != mp.end())
 else
   cout<<"Not found";
 ```
-Alternatively, we can simply use `mp[key]`. This returns 0 if key doesn't exist, else returns the value corresponding to the key.
-For example,
-```cpp
-if(mp[i])
-  cout<<"found";
-else
-  cout<<"Not found";
-```
 *Time complexity: O(logN) for ordered map, O(1) for unordered_map*
 
 #### 3) Accessing values by key
@@ -54,8 +46,7 @@ Key and values in a map can be accessed using an iterator.
 map<char, int>::iterator itr;
 itr = mp.begin();
 cout << "key= " << itr.first <<"value = "<< itr.second;
-```
-*Time complexity: O(logN) for ordered map, O(1) for unordered_map*
+```    
 
 #### 5) Iterating over a map
 ```cpp
