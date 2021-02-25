@@ -18,7 +18,7 @@ unordered_map<char, int> myMap; // for unordered map
 #### 1) Insertion
 Insertion can be done in 2 ways.  
   1. ```mp[key] = value;```
-  2. ```mp.insert({key,value})```
+  2. ```mp.insert({key,value})```    
 *Time complexity: O(logN) for ordered map, O(1) for unordered_map*
 
 #### 2) Finding elements
