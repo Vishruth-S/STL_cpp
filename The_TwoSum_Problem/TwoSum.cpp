@@ -7,7 +7,7 @@ using namespace std;
 bool twoSum_1(vector<int> arr, int target)
 {
     for (int i = 0; i < arr.size(); i++)
-        for (int j = 0; j < arr.size(); j++)
+        for (int j = i+1; j < arr.size(); j++)
             if (arr[i] + arr[j] == target)
                 return true;
 
